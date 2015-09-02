@@ -1,4 +1,25 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/fragment"
-    android:name="co.wildpro.farmapp.MainActivityFragment" tools:layout="@layout/fragment_main"
-    android:layout_width="match_parent" android:layout_height="match_parent" />
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        />
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="co.wildpro.farmapp.MainActivityFragment"
+        tools:layout="@layout/fragment_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_toolbar"
+        />
+
+</RelativeLayout>
